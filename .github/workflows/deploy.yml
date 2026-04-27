@@ -30,4 +30,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: ./ # Change this to your server path (e.g., ./public_html/) if needed
+        server-dir: ./public_html/
