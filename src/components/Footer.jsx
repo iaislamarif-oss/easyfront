@@ -11,7 +11,6 @@ const Footer = () => {
         { name: 'Career In EHCDC', path: '#' },
         { name: 'News & Blog', path: '#' },
         { name: 'Complaint Box', path: '/complaint-box' },
-        { name: 'Privacy Policy', path: '#' },
       ]
     },
     {
@@ -51,8 +50,6 @@ const Footer = () => {
     {
       title: 'Important Link',
       links: [
-        { name: 'Privacy Policy', path: '#' },
-        { name: 'Terms & Conditions', path: '#' },
         { name: 'Order Policy', path: '#' },
         { name: 'Refund Policy', path: '#' },
         { name: 'Fake & IP Policy', path: '#' },
@@ -92,10 +89,11 @@ const Footer = () => {
           <p className="text-[12px] text-slate-400">
             © 2022-2026 <span className="font-bold text-slate-600">Easy Healthcare Diagnostic & Consultation Center Online Platform</span>
           </p>
-          <div className="flex items-center gap-6 text-[12px] text-slate-400">
-            <a href="#" className="hover:text-brand-600 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-brand-600 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-600 transition-colors">Cookie Settings</a>
+          <div className="flex items-center gap-1.5 text-[12px] text-slate-400">
+            Technical Support By, 
+            <a href="https://www.linkedin.com/in/himayet-ali-joy" target="_blank" rel="noopener noreferrer" className="font-bold text-brand-600 hover:underline transition-colors">
+              MD Himayet Ali Joy
+            </a>
           </div>
         </div>
       </div>
