@@ -14,7 +14,7 @@ const Footer = () => {
       ]
     },
     {
-      title: 'Our Service',
+      title: 'Important Link',
       links: [
         { name: 'Find a Doctor', path: '/find-doctor' },
         { name: 'Online Consult', path: '#' },
@@ -26,7 +26,7 @@ const Footer = () => {
       ]
     },
     {
-      title: 'Family Care',
+      title: 'Customer Link',
       links: [
         { name: 'Men Care', path: '#' },
         { name: 'Women Care', path: '/women-care' },
