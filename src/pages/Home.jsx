@@ -10,49 +10,49 @@ const Home = () => {
       id: 1,
       title: "Specialized Doctor Appointment Booking",
       desc: "Online doctor appointment booking system allowing patients to book, reschedule, or cancel appointments online anytime, from any location. We are helping patients select a specialist doctor for their health problems. We aim to bridge the gap between patients and healthcare providers, ensuring better accessibility to healthcare services.",
-      image: "/src/assets/homeservice/bookappoitnment.png"
+      image: "/assets/homeservice/bookappoitnment.png"
     },
     {
       id: 2,
       title: "Primary Care",
       desc: "General and essential healthcare providing accessible, affordable care closest to where people live by integrating digital tools. Quicker communication between patients and care teams to enable faster diagnosis and timely treatment for better recover. We are providing remote consultations, managing chronic conditions, fostering continuous care, and enabling rapid, equitable access to health information.",
-      image: "/src/assets/homeservice/primaryhealthcare.png"
+      image: "/assets/homeservice/primaryhealthcare.png"
     },
     {
       id: 3,
       title: "Medical Tourism",
       desc: "Medical Tourism services facilitate advanced healthcare, in the home country and abroad, offering comprehensive packages. Reviewing medical history and providing tailored treatment plans with cost estimates. Connecting patients with accredited best hospitals, diagnostic, and specialist doctors. Facilitating procedures and coordinating follow-up care, including post-treatment recovery and Logistics & Travel Assistance.",
-      image: "/src/assets/homeservice/medicaltrusom.png"
+      image: "/assets/homeservice/medicaltrusom.png"
     },
     {
       id: 4,
       title: "Tele-Healthcare",
       desc: "Real-time, video-based consultations for primary care and specialty doctor consultations. Remote patients are being monitored for chronic condition management. Patients are sharing medical information with a physician for follow-up and a second opinion. Patients are connecting with video consultations without traveling anywhere, anytime.",
-      image: "/src/assets/homeservice/tele-medicine.png"
+      image: "/assets/homeservice/tele-medicine.png"
     },
     {
       id: 5,
       title: "Home Care",
       desc: "Professional nurses provide wound care, medication management, injection push, and monitor vital signs. Doctor home visits to medical consultations for diagnosis and treatment planning without traveling to a hospital. Physiotherapy & Rehabilitation, Chronic Disease management, and lab sample collection at home.",
-      image: "/src/assets/homeservice/homecare.png"
+      image: "/assets/homeservice/homecare.png"
     },
     {
       id: 6,
       title: "Diabetic Care",
       desc: "Online Comprehensive diabetic care services offer telehealth consultations with specialists, dietitians, and diabetes educators. Personalized care plans for individual needs and health goals. Continuous remote monitoring of blood sugar levels to manage diabetes. Home-based diagnostic tests and medicine delivery services.",
-      image: "/src/assets/homeservice/diabeticcare.png"
+      image: "/assets/homeservice/diabeticcare.png"
     },
     {
       id: 7,
       title: "Safe Surgery",
       desc: "Easy Healthcare provides end-to-end support for your surgical journey. From finding the right specialist to selecting the best hospital. Post-operative care at home, online follow-up, pre-operative care & Cost planning, Patient care attendant (PCA), financial aid & assistance, pick-and-drop, and logistics support.",
-      image: "/src/assets/homeservice/safesurgery.png"
+      image: "/assets/homeservice/safesurgery.png"
     },
     {
       id: 8,
       title: "Online Ambulance Booking",
       desc: "Book online Ambulance Service anywhere, 24/7 emergency medical care, patient transfers, long-distance transport, and specialized medical care. Our Ambulance services are faster, more reliable, and more affordable for emergency or non-emergency care for you.",
-      image: "/src/assets/homeservice/onlineambulance.png"
+      image: "/assets/homeservice/onlineambulance.png"
     }
   ];
 
