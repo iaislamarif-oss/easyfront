@@ -130,7 +130,7 @@ const Header = () => {
         <div className="w-full max-w-[1200px] mx-auto px-4 flex items-center justify-between relative">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 shrink-0 z-10">
-            <img src="/favicon.svg" alt="Easy Healthcare" className="h-10 w-auto object-contain" />
+            <img src="/assets/logo.png" alt="Easy Healthcare" className="h-10 w-auto object-contain" />
           </Link>
 
         {/* Navigation - Centered and slightly shifted left */}
