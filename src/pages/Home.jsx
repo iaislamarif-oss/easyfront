@@ -59,7 +59,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen font-manrope overflow-hidden">
       {/* 1. HERO SECTION & SERVICES AREA with Login-bg */}
-      <div className="login-bg relative pb-20">
+      <div className="login-bg relative pb-12">
         {/* Blank White Hero Placeholder */}
         <section className="h-[400px] w-full bg-white relative overflow-hidden flex items-center justify-center">
           <div className="absolute inset-0 hero-dots opacity-20"></div>
@@ -103,7 +103,7 @@ const Home = () => {
       </div>
 
       {/* 2. SPECIALIZED CARE SECTION - Pure White Background, No Glows */}
-      <section className="bg-white py-20 relative">
+      <section className="bg-white py-12 relative">
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
@@ -152,7 +152,7 @@ const Home = () => {
       </section>
 
       {/* Health Check Packages Section */}
-      <section className="login-bg pt-8 pb-20 relative overflow-hidden">
+      <section className="login-bg pt-8 pb-12 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 z-10">
           <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
@@ -207,7 +207,7 @@ const Home = () => {
       </section>
 
       {/* Membership Section */}
-      <section className="bg-white pt-8 pb-20 relative overflow-hidden">
+      <section className="bg-white pt-8 pb-12 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 z-10">
           <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
@@ -268,7 +268,7 @@ const Home = () => {
       </section>
 
       {/* About Platform Section */}
-      <section className="login-bg py-20 relative overflow-hidden">
+      <section className="login-bg py-12 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 z-10">
           <div className="glass-card p-10 md:p-16 rounded-[20px] border border-white/60">
             <h2 className="text-[28px] md:text-[36px] font-black text-brand-900 mb-2 leading-tight">

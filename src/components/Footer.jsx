@@ -6,7 +6,7 @@ const Footer = () => {
     {
       title: 'About Us',
       links: [
-        { name: 'Who We Are', path: '#' },
+        { name: 'Who We Are', path: '/who-we-are' },
         { name: 'Become a Business Partner', path: '#' },
         { name: 'Become a Health partner', path: '#' },
         { name: 'Become an Ambulance Provider', path: '#' },
@@ -16,22 +16,21 @@ const Footer = () => {
     {
       title: 'Important Link',
       links: [
-        { name: 'Find a Doctor', path: '/find-doctor' },
-        { name: 'Online Consult', path: '#' },
-        { name: 'Medicine & Diagnostic Lab', path: '#' },
-        { name: 'Specialized Care', path: '#' },
-        { name: 'Safe Surgery', path: '/safe-surgery' },
-        { name: 'Medical Tourism', path: '#' },
-        { name: 'Get Ambulance', path: '/get-ambulance' },
+        { name: 'Privacy Policy', path: '#' },
+        { name: 'Terms & Conditions', path: '#' },
+        { name: 'Order Policy', path: '#' },
+        { name: 'Refund Policy', path: '#' },
+        { name: 'IP Use Policy', path: '#' },
       ]
     },
     {
       title: 'Customer Link',
       links: [
-        { name: 'Men Care', path: '#' },
-        { name: 'Women Care', path: '/women-care' },
-        { name: 'Mother’s & Baby Care', path: '#' },
-        { name: 'Child Care', path: '#' },
+        { name: 'Payment Method', path: '#' },
+        { name: 'Portal Use Guide', path: '#' },
+        { name: 'Virtual Support', path: '#' },
+        { name: 'AI Assistant', path: '#' },
+        { name: 'Forgot Password', path: '#' },
       ]
     }
   ];
@@ -41,7 +40,7 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-4">
 
         {/* Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-10 pb-10 border-b border-slate-200/60">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-10 pb-10 border-b border-slate-200/60 max-w-[800px]">
           {footerLinks.map((column, index) => (
             <div key={index}>
               <h4 className="text-[13px] font-bold uppercase tracking-[0.1em] text-brand-900 mb-4 flex items-center gap-2">

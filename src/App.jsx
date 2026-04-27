@@ -18,6 +18,8 @@ import TeleHealthAgent from './pages/TeleHealthAgent';
 import SpecialistSearch from './pages/SpecialistSearch';
 import GetAmbulance from './pages/GetAmbulance';
 import WomenCare from './pages/WomenCare';
+import WhoWeAre from './pages/WhoWeAre';
+
 
 import { MessageCircle, Mail, Phone, MessageSquare } from 'lucide-react';
 
@@ -95,6 +97,7 @@ function App() {
           <Route path="/tele-health-agent" element={<TeleHealthAgent />} />
           <Route path="/get-ambulance" element={<GetAmbulance />} />
           <Route path="/women-care" element={<WomenCare />} />
+          <Route path="/who-we-are" element={<WhoWeAre />} />
           <Route path="/find-specialist" element={<SpecialistSearch />} />
           <Route path="/easy-healthcare-specialist" element={<SpecialistSearch />} />
           <Route path="/dhaka-city-specialist" element={<SpecialistSearch />} />
