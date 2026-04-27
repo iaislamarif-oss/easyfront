@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Smartphone, Lock, Eye, ArrowRight, ArrowLeft } from 'lucide-react';
+import useTitle from '../hooks/useTitle';
 
 const Login = () => {
+  useTitle('Login');
+
   return (
     <div className="min-h-screen login-bg flex items-center justify-center p-4 relative overflow-hidden font-manrope">
       {/* Back Button */}

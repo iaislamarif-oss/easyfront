@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Search, MapPin, UserRound, Building2, Landmark } from 'lucide-react';
+import useTitle from '../hooks/useTitle';
 
 const RequestAppointment = () => {
+  useTitle('Request Appointment');
+
   // Dummy Data
   const data = {
     divisions: ["Dhaka", "Chittagong", "Rajshahi", "Sylhet"],

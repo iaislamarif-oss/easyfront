@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Search, MapPin, UserRound, Filter, ArrowRight, Smartphone } from 'lucide-react';
+import useTitle from '../hooks/useTitle';
 
 const FindDoctor = () => {
+  useTitle('Find Doctor');
+
   // Dummy Data
   const doctors = [
     {
