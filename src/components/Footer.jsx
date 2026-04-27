@@ -4,55 +4,57 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const footerLinks = [
     {
-      title: 'About EHCDC',
+      title: 'About Us',
       links: [
         { name: 'Who We Are', path: '#' },
-        { name: 'Contact Us', path: '#' },
-        { name: 'Career In EHCDC', path: '#' },
-        { name: 'News & Blog', path: '#' },
-        { name: 'Complaint Box', path: '/complaint-box' },
+        { name: 'Become a Business Partner', path: '#' },
+        { name: 'Become a Health partner', path: '#' },
+        { name: 'Become an Ambulance Provider', path: '#' },
+        { name: 'Contact us', path: '#' },
       ]
     },
     {
-      title: 'Our Services',
+      title: 'Our Service',
       links: [
         { name: 'Find a Doctor', path: '/find-doctor' },
-        { name: 'Specialist Doctor Consult', path: '#' },
-        { name: 'Primary Healthcare', path: '/primary-healthcare' },
-        { name: 'Medicine & Diagnostic Labs', path: '#' },
-        { name: 'Book Diagnostic Lab Tests', path: '#' },
-        { name: 'Health Check Package', path: '/health-check' },
+        { name: 'Online Consult', path: '#' },
+        { name: 'Medicine & Diagnostic Lab', path: '#' },
+        { name: 'Specialized Care', path: '#' },
+        { name: 'Safe Surgery', path: '/safe-surgery' },
         { name: 'Medical Tourism', path: '#' },
+        { name: 'Get Ambulance', path: '/get-ambulance' },
       ]
     },
     {
-      title: 'Specialized Care',
+      title: 'Specialized Care (1)',
       links: [
         { name: 'Men Care', path: '#' },
         { name: 'Women Care', path: '/women-care' },
         { name: 'Mother’s & Baby Care', path: '#' },
         { name: 'Child Care', path: '#' },
+        { name: 'Cancer Care', path: '#' },
         { name: 'Diabetic Care', path: '/diabetic-care' },
-        { name: 'Mental Healthcare', path: '/mental-healthcare' },
       ]
     },
     {
-      title: 'Extended Care',
+      title: 'Specialized Care (2)',
+      links: [
+        { name: 'Heart Care', path: '#' },
+        { name: 'Skin Care', path: '#' },
+        { name: 'Mental Healthcare', path: '/mental-healthcare' },
+        { name: 'Fertility Care', path: '#' },
+        { name: 'Diet & Nutrition', path: '#' },
+        { name: 'Eye Care', path: '#' },
+      ]
+    },
+    {
+      title: 'Specialized Care (3)',
       links: [
         { name: 'Home Care Service', path: '/home-care' },
-        { name: 'Safe Surgery', path: '/safe-surgery' },
         { name: 'Patient Advocacy', path: '#' },
         { name: 'Smart Home Care', path: '#' },
         { name: 'Patient Attendance', path: '#' },
-        { name: 'Get Ambulance', path: '/get-ambulance' },
-      ]
-    },
-    {
-      title: 'Important Link',
-      links: [
-        { name: 'Order Policy', path: '#' },
-        { name: 'Refund Policy', path: '#' },
-        { name: 'Fake & IP Policy', path: '#' },
+        { name: 'Complaint Box', path: '/complaint-box' },
       ]
     }
   ];
