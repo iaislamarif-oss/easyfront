@@ -156,7 +156,7 @@ const Header = () => {
               {/* Simple Dropdown Menu */}
               {link.subLinks && !link.isMega && (
                 <div className="absolute top-full left-0 w-60 mt-[11px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="bg-white py-2 rounded-b-[3px] border-t-2 border-brand-600 border-x border-b border-slate-100 shadow-xl">
+                  <div className="bg-white py-2 rounded-b-[3px] border-t-2 border-brand-600 border-x border-b border-slate-100">
                     {link.subLinks.map((sub, sIndex) => (
                       <Link 
                         key={sIndex}
@@ -173,7 +173,7 @@ const Header = () => {
               {/* Mega Menu Dropdown */}
               {link.isMega && link.columns && (
                 <div className="absolute top-full -left-[280px] w-[880px] mt-[11px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="bg-white p-8 rounded-b-[3px] grid grid-cols-4 gap-8 border-t-2 border-brand-600 border-x border-b border-slate-100 shadow-xl">
+                  <div className="bg-white p-8 rounded-b-[3px] grid grid-cols-4 gap-8 border-t-2 border-brand-600 border-x border-b border-slate-100">
                     {link.columns.map((column, colIndex) => (
                       <div key={colIndex} className="flex flex-col">
                         <h4 className="text-[12px] font-bold text-brand-900 mb-4 uppercase tracking-[0.1em] border-b border-slate-100 pb-2 flex items-center justify-between">
