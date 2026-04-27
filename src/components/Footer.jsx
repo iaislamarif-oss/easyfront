@@ -26,21 +26,26 @@ const Footer = () => {
       ]
     },
     {
-      title: 'Specialized Care (1)',
+      title: 'Family Care',
       links: [
         { name: 'Men Care', path: '#' },
         { name: 'Women Care', path: '/women-care' },
         { name: 'Mother’s & Baby Care', path: '#' },
         { name: 'Child Care', path: '#' },
-        { name: 'Cancer Care', path: '#' },
-        { name: 'Diabetic Care', path: '/diabetic-care' },
       ]
     },
     {
-      title: 'Specialized Care (2)',
+      title: 'Chronic Care',
       links: [
+        { name: 'Cancer Care', path: '#' },
+        { name: 'Diabetic Care', path: '/diabetic-care' },
         { name: 'Heart Care', path: '#' },
         { name: 'Skin Care', path: '#' },
+      ]
+    },
+    {
+      title: 'Wellbeing',
+      links: [
         { name: 'Mental Healthcare', path: '/mental-healthcare' },
         { name: 'Fertility Care', path: '#' },
         { name: 'Diet & Nutrition', path: '#' },
@@ -48,13 +53,12 @@ const Footer = () => {
       ]
     },
     {
-      title: 'Specialized Care (3)',
+      title: 'Extended Care',
       links: [
         { name: 'Home Care Service', path: '/home-care' },
         { name: 'Patient Advocacy', path: '#' },
         { name: 'Smart Home Care', path: '#' },
         { name: 'Patient Attendance', path: '#' },
-        { name: 'Complaint Box', path: '/complaint-box' },
       ]
     }
   ];
@@ -64,7 +68,7 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-4">
 
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-10 pb-10 border-b border-slate-200/60">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-10 pb-10 border-b border-slate-200/60">
           {footerLinks.map((column, index) => (
             <div key={index}>
               <h4 className="text-[13px] font-bold uppercase tracking-[0.1em] text-brand-900 mb-4 flex items-center gap-2">
