@@ -8,6 +8,12 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import ComplaintBox from './pages/ComplaintBox';
 import AmbulanceProvider from './pages/AmbulanceProvider';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
+import OrderPolicy from './pages/OrderPolicy';
+import RefundPolicy from './pages/RefundPolicy';
+import IpUsePolicy from './pages/IpUsePolicy';
+import ForgotPassword from './pages/ForgotPassword';
 import RequestAppointment from './pages/RequestAppointment';
 import FindDoctor from './pages/FindDoctor';
 import SecondOpinion from './pages/SecondOpinion';
@@ -33,6 +39,12 @@ const Layout = ({ children }) => {
     '/signup',
     '/complaint-box',
     '/partner/ambulance',
+    '/privacy-policy',
+    '/terms-and-conditions',
+    '/order-policy',
+    '/refund-policy',
+    '/ip-use-policy',
+    '/forgot-password',
     '/request-appointment', 
     '/lab-report', 
     '/tele-health-agent',
@@ -94,6 +106,12 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/complaint-box" element={<ComplaintBox />} />
           <Route path="/partner/ambulance" element={<AmbulanceProvider />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsConditions />} />
+          <Route path="/order-policy" element={<OrderPolicy />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/ip-use-policy" element={<IpUsePolicy />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/request-appointment" element={<RequestAppointment />} />
           <Route path="/find-doctor" element={<FindDoctor />} />
           <Route path="/second-opinion" element={<SecondOpinion />} />

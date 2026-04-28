@@ -9,18 +9,18 @@ const Footer = () => {
         { name: 'Who We Are', path: '/who-we-are' },
         { name: 'Become a Business Partner', path: '#' },
         { name: 'Become a Health partner', path: '#' },
-        { name: 'Become an Ambulance Provider', path: '#' },
+        { name: 'Become an Ambulance Provider', path: '/partner/ambulance' },
         { name: 'Contact us', path: '#' },
       ]
     },
     {
       title: 'Important Link',
       links: [
-        { name: 'Privacy Policy', path: '#' },
-        { name: 'Terms & Conditions', path: '#' },
-        { name: 'Order Policy', path: '#' },
-        { name: 'Refund Policy', path: '#' },
-        { name: 'IP Use Policy', path: '#' },
+        { name: 'Privacy Policy', path: '/privacy-policy' },
+        { name: 'Terms & Conditions', path: '/terms-and-conditions' },
+        { name: 'Order Policy', path: '/order-policy' },
+        { name: 'Refund Policy', path: '/refund-policy' },
+        { name: 'IP Use Policy', path: '/ip-use-policy' },
       ]
     },
     {
@@ -30,7 +30,7 @@ const Footer = () => {
         { name: 'Portal Use Guide', path: '#' },
         { name: 'Virtual Support', path: '#' },
         { name: 'AI Assistant', path: '#' },
-        { name: 'Forgot Password', path: '#' },
+        { name: 'Forgot Password', path: '/forgot-password' },
       ]
     }
   ];

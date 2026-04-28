@@ -9,43 +9,43 @@ const Home = () => {
     {
       id: 1,
       title: "Specialized Doctor Appointment Booking",
-      desc: "Online doctor appointment booking system allowing patients to book, reschedule, or cancel appointments online anytime, from any location. We are helping patients select a specialist doctor for their health problems. We aim to bridge the gap between patients and healthcare providers, ensuring better accessibility to healthcare services.",
+      desc: "Online doctor appointment booking is a web and mobile app-based system that allows patients to book, reschedule, or cancel appointments online anytime, from any location. We are helping patients select a specialist doctor for their health problems. We aim to bridge the gap between patients and healthcare providers, ensuring better accessibility to healthcare services.",
       image: "/assets/homeservice/bookappoitnment.png"
     },
     {
       id: 2,
       title: "Primary Care",
-      desc: "General and essential healthcare providing accessible, affordable care closest to where people live by integrating digital tools. Quicker communication between patients and care teams to enable faster diagnosis and timely treatment for better recover. We are providing remote consultations, managing chronic conditions, fostering continuous care, and enabling rapid, equitable access to health information.",
+      desc: "Primary care is a general and essential healthcare system that provides accessible, affordable care to individuals and families. To bring quality, comprehensive care closest to where people live by integrating digital tools to ensure seamless, coordinated care and better decision-making. Quicker communication between patients and care teams to enable faster diagnosis and timely treatment for better recover .We are providing remote consultations, managing chronic conditions, fostering continuous care, and enabling rapid, equitable access to health information.",
       image: "/assets/homeservice/primaryhealthcare.png"
     },
     {
       id: 3,
       title: "Medical Tourism",
-      desc: "Medical Tourism services facilitate advanced healthcare, in the home country and abroad, offering comprehensive packages. Reviewing medical history and providing tailored treatment plans with cost estimates. Connecting patients with accredited best hospitals, diagnostic, and specialist doctors. Facilitating procedures and coordinating follow-up care, including post-treatment recovery and Logistics & Travel Assistance.",
+      desc: "Medical Tour services facilitate advanced healthcare, in the home country and abroad, offering comprehensive packages. Reviewing medical history and providing tailored treatment plans with cost estimates. Connecting patients with accredited best hospitals, diagnostic, and specialist doctors. Facilitating procedures and coordinating follow-up care, including post-treatment recovery and Logistics & Travel Assistance.",
       image: "/assets/homeservice/medicaltrusom.png"
     },
     {
       id: 4,
       title: "Tele-Healthcare",
-      desc: "Real-time, video-based consultations for primary care and specialty doctor consultations. Remote patients are being monitored for chronic condition management. Patients are sharing medical information with a physician for follow-up and a second opinion. Patients are connecting with video consultations without traveling anywhere, anytime.",
+      desc: "Tele-healthcare uses digital telecommunications and Healthcare technology to Provide Patient care, prevention, and health education services. Real-time, video-based consultations for primary care and specialty doctor consultations. Remote patients are being monitored for chronic condition management. Patient is sharing medical information (images or lab results) with a physician for follow-up and a second opinion. Patients are connecting with video consultations with a general physician and specialist without traveling anywhere, anytime, and get cost-effective healthcare.",
       image: "/assets/homeservice/tele-medicine.png"
     },
     {
       id: 5,
       title: "Home Care",
-      desc: "Professional nurses provide wound care, medication management, injection push, and monitor vital signs. Doctor home visits to medical consultations for diagnosis and treatment planning without traveling to a hospital. Physiotherapy & Rehabilitation, Chronic Disease management, and lab sample collection at home.",
+      desc: "Home healthcare services provide medical care in a patient's home. Professional nurses provide wound care, medication management, injection push, and monitor vital signs. Doctor home visits to medical consultations for diagnosis and treatment planning without traveling to a hospital. Physiotherapy & Rehabilitation, Chronic Disease management, and lab sample collection at home, Patient Care attendant (PCA) support. Professional care at home often leads to faster recuperation and better clinical outcomes, reduces the need for hospital visits, and provides tailored, flexible care plans.",
       image: "/assets/homeservice/homecare.png"
     },
     {
       id: 6,
       title: "Diabetic Care",
-      desc: "Online Comprehensive diabetic care services offer telehealth consultations with specialists, dietitians, and diabetes educators. Personalized care plans for individual needs and health goals. Continuous remote monitoring of blood sugar levels to manage diabetes. Home-based diagnostic tests and medicine delivery services.",
+      desc: "Online Comprehensive diabetic care services offer telehealth consultations with specialists, dietitians, and diabetes educators. Personalized care plans for individual needs and health goals. Continuous remote monitoring of blood sugar levels to manage diabetes. Home-based diagnostic tests and medicine delivery services. These services aim to make diabetes management more accessible and affordable, reducing the need for travel while improving long-term health outcomes",
       image: "/assets/homeservice/diabeticcare.png"
     },
     {
       id: 7,
       title: "Safe Surgery",
-      desc: "Easy Healthcare provides end-to-end support for your surgical journey. From finding the right specialist to selecting the best hospital. Post-operative care at home, online follow-up, pre-operative care & Cost planning, Patient care attendant (PCA), financial aid & assistance, pick-and-drop, and logistics support.",
+      desc: "Easy Healthcare provides end-to-end support for your surgical journey. From finding the right specialist to selecting the best hospital. Post-operative care at home, online follow-up, pre-operative care & Cost planning, Patient care attendant (PCA), financial aid & assistance, pick-and-drop, and logistics support. Connect with affordable surgery packages, the best specialists, and top-rated hospitals for successful surgery and better recovery. Our expert team ensures a safe, transparent, and comfortable surgery experience for every patient.",
       image: "/assets/homeservice/safesurgery.png"
     },
     {
@@ -65,30 +65,24 @@ const Home = () => {
           <div className="absolute inset-0 hero-dots opacity-20"></div>
         </section>
 
-        {/* Services Grid */}
+        {/* Services Timeline */}
         <main className="max-w-[1200px] mx-auto w-full px-4 z-10 mt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service) => (
+          <div className="flex flex-col glass-card rounded-[10px] border border-white/50 overflow-hidden">
+            {services.map((service, index) => (
               <div 
                 key={service.id} 
-                className="group glass-card rounded-[5px] border border-white/50 overflow-hidden hover:border-brand-600/30 transition-all duration-300 flex flex-col"
+                className={`p-8 md:p-12 flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse bg-white/20' : 'md:flex-row'} items-center gap-8 md:gap-16 border-b border-white/50 last:border-b-0 group`}
               >
-                <div className="h-[200px] overflow-hidden relative">
+                <div className="w-full md:w-1/2 h-[240px] md:h-[300px] rounded-[8px] overflow-hidden shrink-0">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                 </div>
-                <div className="p-6 flex flex-col flex-1 gap-3">
-                  <h2 className="text-[16px] font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B]">
+                <div className="w-full md:w-1/2 flex flex-col gap-4">
+                  <h2 className="text-[20px] md:text-[22px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] mb-1">
                     {service.title}
                   </h2>
-                  <p className="text-slate-500 text-[13.5px] leading-relaxed line-clamp-4">
+                  <p className="text-slate-600 text-[14.5px] leading-relaxed text-justify">
                     {service.desc}
                   </p>
-                  <div className="mt-auto pt-2">
-                    <button className="flex items-center gap-2 text-brand-600 hover:text-brand-700 transition-colors font-bold text-[13px] group cursor-pointer">
-                      Explore More
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
                 </div>
               </div>
             ))}
