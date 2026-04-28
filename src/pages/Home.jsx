@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Users, Apple, Activity, Baby, Brain, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ShieldCheck, Users, Apple, Activity, Baby, Brain, Heart, Video } from 'lucide-react';
 import useTitle from '../hooks/useTitle';
 
 const Home = () => {
@@ -97,7 +98,7 @@ const Home = () => {
       </div>
 
       {/* 2. SPECIALIZED CARE SECTION - Pure White Background, No Glows */}
-      <section className="bg-white py-12 relative">
+      <section className="bg-white pt-12 pb-4 relative">
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
@@ -113,30 +114,27 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
-              { title: "Men & Women Care", icon: Users, desc: "Comprehensive healthcare for adults." },
-              { title: "Diet & Nutrition", icon: Apple, desc: "Expert guidance for healthy eating." },
-              { title: "Chronic Disease", icon: Activity, desc: "Long-term management of conditions." },
-              { title: "Mother & Baby", icon: Baby, desc: "Care for mothers and newborns." },
-              { title: "Mental Healthcare", icon: Brain, desc: "Professional support for mind." },
+              { title: "Men & Women Care", icon: Video, desc: "Comprehensive healthcare for adults." },
+              { title: "Diet & Nutrition", icon: Video, desc: "Expert guidance for healthy eating." },
+              { title: "Chronic Disease", icon: Video, desc: "Long-term management of conditions." },
+              { title: "Skin Care", icon: Video, desc: "Advanced dermatological treatments." },
+              { title: "Mental Healthcare", icon: Video, desc: "Professional support for mind." },
             ].map((care, index) => (
               <div 
                 key={index} 
-                className="login-bg p-8 rounded-[5px] border border-white flex flex-col items-start gap-4 relative overflow-hidden h-[260px]"
+                className="bg-primary p-8 rounded-[5px] border border-white flex flex-col items-start gap-4 relative overflow-hidden h-[260px]"
               >
-                {/* Glass Overlay for readability */}
-                <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-0"></div>
-                
-                <div className="relative z-10 w-10 h-10 rounded-lg bg-white/80 border border-white flex items-center justify-center text-brand-600 shrink-0">
+                <div className="relative z-10 w-10 h-10 rounded-lg bg-white border border-white flex items-center justify-center text-primary shrink-0">
                   <care.icon className="w-5 h-5" />
                 </div>
                 
-                <div className="relative z-10 mt-auto w-full flex flex-col gap-3">
-                  <h3 className="font-bold text-[14px] bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] leading-tight">
+                <div className="relative z-10 mt-auto w-full flex flex-col gap-1">
+                  <h3 className="font-bold text-[14px] text-white leading-tight">
                     {care.title}
                   </h3>
-                  <button className="w-full flex items-center justify-center gap-1.5 text-brand-600 font-bold text-[13px] cursor-pointer border border-brand-600/20 py-2 rounded-[5px] bg-white/40">
+                  <button className="w-full flex items-center justify-start gap-1.5 text-white font-bold text-[13px] cursor-pointer py-1 bg-transparent hover:opacity-80 transition-opacity group">
                     Consult Now
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </div>
@@ -146,18 +144,18 @@ const Home = () => {
       </section>
 
       {/* Health Check Packages Section */}
-      <section className="login-bg pt-8 pb-12 relative overflow-hidden">
+      <section className="bg-white pt-6 pb-12 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 z-10">
           <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
               Health Check Packages
             </h2>
-            <button className="flex items-center gap-2 transition-all font-bold text-[14px] group cursor-pointer border border-brand-600/20 px-5 py-2 rounded-[5px] hover:bg-brand-600/5">
+            <Link to="/health-check" className="flex items-center gap-2 transition-all font-bold text-[14px] group cursor-pointer border border-brand-600/20 px-5 py-2 rounded-[5px] hover:bg-brand-600/5">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B]">
                 See All Health Check Packages
               </span>
               <ArrowRight className="w-4 h-4 text-[#008E6B] group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -165,39 +163,34 @@ const Home = () => {
               { category: "General Health Checkup", title: "General Health Checkup", sub: "For Men (Above 40)", icon: Heart },
               { category: "Executive Health Checkup", title: "Executive Health Checkup", sub: "For Men (Above 40)", icon: Heart },
               { category: "Whole Body Checkup", title: "Whole Body Checkup", sub: "For Men (Above 40)", icon: Heart },
-              { category: "Child Care", title: "Child Care", sub: "For Girl/Boy", icon: Heart },
+              { category: "Breast Cancer", title: "Breast Cancer", sub: "For Women", icon: Heart },
             ].map((pkg, index) => (
               <div 
                 key={index} 
-                className="glass-card p-8 rounded-[5px] border border-white flex flex-col items-start gap-4 relative overflow-hidden h-[260px]"
+                className="bg-primary p-8 rounded-[5px] border border-white flex flex-col items-start gap-4 relative overflow-hidden h-[260px]"
               >
-                <div className="relative z-10 w-10 h-10 rounded-lg bg-white/80 border border-white flex items-center justify-center text-brand-600 shrink-0">
+                <div className="relative z-10 w-10 h-10 rounded-lg bg-white border border-white flex items-center justify-center text-brand-600 shrink-0">
                   <pkg.icon className="w-5 h-5" />
                 </div>
                 
-                <div className="relative z-10 mt-auto w-full flex flex-col gap-3">
+                <div className="relative z-10 mt-auto w-full flex flex-col gap-1">
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-bold text-[16px] bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] leading-tight">
+                    <h3 className="font-bold text-[16px] text-white leading-tight">
                       {pkg.title}
                     </h3>
-                    <p className="text-slate-500 text-[13px] font-medium">{pkg.sub}</p>
+                    <p className="text-white text-[13px] font-medium">{pkg.sub}</p>
                   </div>
 
-                  <button className="w-full flex items-center justify-center gap-1.5 text-brand-600 font-bold text-[13px] cursor-pointer border border-brand-600/20 py-2 rounded-[5px] bg-white/40">
+                  <Link to="/health-check" className="w-full flex items-center justify-start gap-1.5 text-white font-bold text-[13px] cursor-pointer py-1 bg-transparent hover:opacity-80 transition-opacity group">
                     View Package
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Background Glows (Consistent with Login Theme) */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-          <div className="absolute top-[10%] right-[5%] w-[30%] h-[40%] bg-[#89ceff]/10 rounded-full blur-[100px]"></div>
-          <div className="absolute bottom-[10%] left-[5%] w-[30%] h-[40%] bg-[#7bf9cb]/10 rounded-full blur-[100px]"></div>
-        </div>
       </section>
 
       {/* Membership Section */}
@@ -207,12 +200,12 @@ const Home = () => {
             <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
               Membership
             </h2>
-            <button className="flex items-center gap-2 transition-all font-bold text-[14px] group cursor-pointer border border-brand-600/20 px-5 py-2 rounded-[5px] hover:bg-brand-600/5">
+            <Link to="/membership" className="flex items-center gap-2 transition-all font-bold text-[14px] group cursor-pointer border border-brand-600/20 px-5 py-2 rounded-[5px] hover:bg-brand-600/5">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B]">
                 See All Membership
               </span>
               <ArrowRight className="w-4 h-4 text-[#008E6B] group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -220,40 +213,37 @@ const Home = () => {
               { title: "Individual Plan", sub: "For 1 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
               { title: "Couple Plan", sub: "For 3 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
               { title: "Family Plan", sub: "For 5 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
-              { title: "Joint Family Plan", sub: "For 10 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
+              { title: "Group Plan", sub: "For 10 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
             ].map((tier, index) => (
               <div 
                 key={index} 
-                className="login-bg p-8 rounded-[5px] border border-white flex flex-col items-start gap-6 relative overflow-hidden"
+                className="bg-primary p-8 rounded-[5px] border border-white flex flex-col items-start gap-6 relative overflow-hidden"
               >
-                {/* Glass Overlay for readability */}
-                <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] z-0"></div>
-                
-                <div className="relative z-10 w-12 h-12 rounded-xl bg-white/80 border border-white flex items-center justify-center text-brand-600 shrink-0">
+                <div className="relative z-10 w-12 h-12 rounded-xl bg-white border border-white flex items-center justify-center text-primary shrink-0">
                   <tier.icon className="w-6 h-6" />
                 </div>
                 
                 <div className="relative z-10 flex flex-col gap-1">
-                  <h3 className="font-bold text-[18px] bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] leading-tight">
+                  <h3 className="font-bold text-[18px] text-white leading-tight">
                     {tier.title}
                   </h3>
-                  <p className="text-slate-500 text-[13px] font-bold uppercase tracking-wider">{tier.sub}</p>
+                  <p className="text-white text-[13px] font-bold uppercase tracking-wider">{tier.sub}</p>
                 </div>
 
                 <ul className="relative z-10 flex flex-col gap-2 w-full">
                   {tier.features.map((feature, fIdx) => (
-                    <li key={fIdx} className="text-[13px] text-slate-600 flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-brand-600"></div>
+                    <li key={fIdx} className="text-[13px] text-white flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <div className="relative z-10 mt-auto w-full pt-4">
-                  <button className="w-full flex items-center justify-center gap-2 text-brand-600 font-bold text-[14px] cursor-pointer border border-brand-600/20 py-2.5 rounded-[5px] bg-white/40">
+                  <Link to="/membership" className="w-full flex items-center justify-start gap-1.5 text-white font-bold text-[13px] cursor-pointer py-1 bg-transparent hover:opacity-80 transition-opacity group">
                     Get Membership
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             ))}
