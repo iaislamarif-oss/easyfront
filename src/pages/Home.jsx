@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Users, Apple, Activity, Baby, Brain, Heart, Video } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Users, Activity, Heart, Video, Apple, Brain } from 'lucide-react';
 import useTitle from '../hooks/useTitle';
+import GeneralHealthIcon from '../assets/Generalhealth.svg';
+import HeartCareIcon from '../assets/Heartcare.svg';
+import ExecutiveCheckIcon from '../assets/Excutivecheck.svg';
+import BreastCancerIcon from '../assets/Brestcancer.svg';
 
 const Home = () => {
   useTitle('Home');
@@ -70,15 +74,15 @@ const Home = () => {
         <main className="max-w-[1200px] mx-auto w-full px-4 z-10 mt-16">
           <div className="flex flex-col glass-card rounded-[10px] border border-white/50 overflow-hidden">
             {services.map((service, index) => (
-              <div 
-                key={service.id} 
+              <div
+                key={service.id}
                 className={`p-8 md:p-12 flex flex-col ${index % 2 !== 0 ? 'md:flex-row-reverse bg-white/20' : 'md:flex-row'} items-center gap-8 md:gap-16 border-b border-white/50 last:border-b-0 group`}
               >
                 <div className="w-full md:w-1/2 h-[240px] md:h-[300px] rounded-[8px] overflow-hidden shrink-0">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col gap-4">
-                  <h2 className="text-[20px] md:text-[22px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] mb-1">
+                  <h2 className="text-[20px] md:text-[22px] font-black leading-tight text-[#1e3d36] mb-1">
                     {service.title}
                   </h2>
                   <p className="text-slate-600 text-[14.5px] leading-relaxed text-justify">
@@ -97,169 +101,217 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 2. SPECIALIZED CARE SECTION - Pure White Background, No Glows */}
-      <section className="bg-white pt-12 pb-4 relative">
+      {/* 2. SPECIALISED CARE SECTION - Colorful Grid Redesign */}
+      <section className="bg-white pt-16 md:pt-24 pb-8 md:pb-12 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4">
-          <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
-              Specialized Care
-            </h2>
-            <button className="flex items-center gap-2 transition-all font-bold text-[14px] group cursor-pointer border border-brand-600/20 px-5 py-2 rounded-[5px] hover:bg-brand-600/5">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B]">
-                See All Specialized Care
-              </span>
-              <ArrowRight className="w-4 h-4 text-[#008E6B] group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              { title: "Men & Women Care", icon: Video, desc: "Comprehensive healthcare for adults." },
-              { title: "Diet & Nutrition", icon: Video, desc: "Expert guidance for healthy eating." },
-              { title: "Chronic Disease", icon: Video, desc: "Long-term management of conditions." },
-              { title: "Skin Care", icon: Video, desc: "Advanced dermatological treatments." },
-              { title: "Mental Healthcare", icon: Video, desc: "Professional support for mind." },
-            ].map((care, index) => (
-              <div 
-                key={index} 
-                className="bg-primary p-8 rounded-[5px] border border-white flex flex-col items-start gap-4 relative overflow-hidden h-[260px]"
-              >
-                <div className="relative z-10 w-10 h-10 rounded-lg bg-white border border-white flex items-center justify-center text-primary shrink-0">
-                  <care.icon className="w-5 h-5" />
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* Left Content */}
+            <div className="w-full lg:w-5/12 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <h2 className="text-[#1e3d36] text-[36px] md:text-[52px] font-black leading-tight mb-6">
+                Specialized Care
+              </h2>
+              <p className="text-slate-500 text-[16px] md:text-[18px] leading-relaxed mb-10 max-w-md">
+                We provide the highest quality healthcare services with advanced technology and expert doctors to ensure your well-being.
+              </p>
+              <button className="px-10 py-3 rounded-full border border-teal-100 text-teal-600 font-bold text-[16px] hover:bg-teal-50 transition-all shadow-sm cursor-pointer">
+                View All Care
+              </button>
+            </div>
+
+            {/* Right Grid Content - Staggered 2-Column Layout */}
+            <div className="w-full lg:w-7/12 flex items-center justify-center">
+              <div className="grid grid-cols-2 gap-3 md:gap-4 w-full max-w-md mx-auto lg:mx-0">
+                {/* Column 1 */}
+                <div className="flex flex-col gap-3 md:gap-4">
+                  {/* Card 1: Family Care (Top Aligned) */}
+                  <div className="bg-gradient-to-br from-orange-400 to-orange-500 rounded-[20px] p-4 flex flex-col justify-between h-[130px] md:h-[150px] shadow-lg shadow-orange-500/20 relative group cursor-pointer">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-white font-black text-[14px] md:text-[15px] leading-tight">
+                        Family <br /> Care
+                      </h3>
+                      <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center text-orange-500 shadow-sm">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
+                    </div>
+                    <div className="flex justify-center">
+                      <Users className="w-8 h-8 text-white/90" />
+                    </div>
+                  </div>
+
+                  {/* Card 2: Extended Care (Bottom Aligned with Chronic) */}
+                  <div className="bg-gradient-to-br from-blue-400 to-blue-500 rounded-[20px] p-4 flex flex-col justify-between h-[95px] md:h-[110px] shadow-lg shadow-blue-500/20 relative group cursor-pointer">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-white font-black text-[13px] md:text-[14px] leading-tight">
+                        Extended <br /> Care
+                      </h3>
+                      <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center text-blue-500 shadow-sm">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
+                    </div>
+                    <div className="flex justify-center">
+                      <Heart className="w-6 h-6 text-white/90" />
+                    </div>
+                  </div>
                 </div>
-                
-                <div className="relative z-10 mt-auto w-full flex flex-col gap-1">
-                  <h3 className="font-bold text-[14px] text-white leading-tight">
-                    {care.title}
-                  </h3>
-                  <button className="w-full flex items-center justify-start gap-1.5 text-white font-bold text-[13px] cursor-pointer py-1 bg-transparent hover:opacity-80 transition-opacity group">
-                    Consult Now
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
+
+                {/* Column 2 */}
+                <div className="flex flex-col gap-3 md:gap-4">
+                  {/* Card 3: Wellbeing Care (Top Aligned with Family) */}
+                  <div className="bg-gradient-to-br from-[#4ade80] to-[#22c55e] rounded-[20px] p-4 flex flex-col justify-between h-[95px] md:h-[110px] shadow-lg shadow-green-500/20 relative group cursor-pointer">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-white font-black text-[13px] md:text-[14px] leading-tight">
+                        Wellbeing <br /> Care
+                      </h3>
+                      <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center text-green-500 shadow-sm">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
+                    </div>
+                    <div className="flex justify-center">
+                      <Apple className="w-6 h-6 text-white/90" />
+                    </div>
+                  </div>
+
+                  {/* Card 4: Chronic Disease (Bottom Aligned) */}
+                  <div className="bg-gradient-to-br from-purple-400 to-purple-500 rounded-[20px] p-4 flex flex-col justify-between h-[130px] md:h-[150px] shadow-lg shadow-purple-500/20 relative group cursor-pointer">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-white font-black text-[14px] md:text-[15px] leading-tight">
+                        Chronic <br /> Disease Care
+                      </h3>
+                      <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm">
+                        <ArrowRight className="w-2.5 h-2.5" />
+                      </div>
+                    </div>
+                    <div className="flex justify-center">
+                      <Activity className="w-8 h-8 text-white/90" />
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Health Check Packages Section */}
-      <section className="bg-white pt-6 pb-12 relative overflow-hidden">
+      <section className="bg-white pt-8 pb-8 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 z-10">
-          <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
-              Health Check Packages
-            </h2>
-            <Link to="/health-check" className="flex items-center gap-2 transition-all font-bold text-[14px] group cursor-pointer border border-brand-600/20 px-5 py-2 rounded-[5px] hover:bg-brand-600/5">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B]">
-                See All Health Check Packages
-              </span>
-              <ArrowRight className="w-4 h-4 text-[#008E6B] group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { category: "General Health Checkup", title: "General Health Checkup", sub: "For Men (Above 40)", icon: Heart },
-              { category: "Executive Health Checkup", title: "Executive Health Checkup", sub: "For Men (Above 40)", icon: Heart },
-              { category: "Whole Body Checkup", title: "Whole Body Checkup", sub: "For Men (Above 40)", icon: Heart },
-              { category: "Breast Cancer", title: "Breast Cancer", sub: "For Women", icon: Heart },
-            ].map((pkg, index) => (
-              <div 
-                key={index} 
-                className="bg-primary p-8 rounded-[5px] border border-white flex flex-col items-start gap-4 relative overflow-hidden h-[260px]"
-              >
-                <div className="relative z-10 w-10 h-10 rounded-lg bg-white border border-white flex items-center justify-center text-brand-600 shrink-0">
-                  <pkg.icon className="w-5 h-5" />
+          {/* Billboard Card - Light Theme */}
+          <div className="bg-[#f8fafc] border border-slate-100 rounded-[24px] p-8 md:p-12 relative overflow-hidden group shadow-sm">
+            {/* Background decorative element */}
+            <div className="absolute -right-20 -top-20 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl group-hover:bg-teal-500/10 transition-all duration-700"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-brand-600/5 rounded-full blur-3xl"></div>
+
+            <div className="flex flex-col lg:flex-row items-center gap-12 relative z-10">
+              {/* Left Side: Content */}
+              <div className="w-full lg:w-5/12 flex flex-col gap-6 text-center lg:text-left">
+                <div>
+                  <h2 className="text-[#1e3d36] text-[32px] md:text-[42px] font-black leading-tight mb-4">
+                    <span className="text-teal-600">Health Check</span> <br />
+                    Packages
+                  </h2>
+                  <p className="text-slate-500 text-[15px] md:text-[16px]">
+                    Comprehensive health screening packages designed for you and your family's specific needs.
+                  </p>
                 </div>
                 
-                <div className="relative z-10 mt-auto w-full flex flex-col gap-1">
-                  <div className="flex flex-col gap-1">
-                    <h3 className="font-bold text-[16px] text-white leading-tight">
-                      {pkg.title}
-                    </h3>
-                    <p className="text-white text-[13px] font-medium">{pkg.sub}</p>
+                <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
+                  <Link to="/health-check" className="w-full sm:w-fit px-8 py-2.5 bg-teal-600 text-white rounded-[6px] font-bold text-[15px] hover:bg-[#1e3d36] transition-all shadow-lg hover:shadow-teal-500/20 text-center">
+                    See All Packages
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Side: 4 Subjects Grid */}
+              <div className="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { title: "General Health Checkup", icon: GeneralHealthIcon, color: "bg-blue-50 border-blue-100 text-blue-900" },
+                  { title: "Heart Health Checkup", icon: HeartCareIcon, color: "bg-red-50 border-red-100 text-red-900" },
+                  { title: "Executive Health Checkup", icon: ExecutiveCheckIcon, color: "bg-purple-50 border-purple-100 text-purple-900" },
+                  { title: "Breast Cancer Screening", icon: BreastCancerIcon, color: "bg-pink-50 border-pink-100 text-pink-900" },
+                ].map((item, index) => (
+                  <div key={index} className={`${item.color.split(' ')[0]} border ${item.color.split(' ')[1]} p-5 rounded-[12px] flex items-center gap-4 hover:shadow-md transition-all cursor-pointer group/item shadow-sm`}>
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-white p-2 shadow-sm">
+                      <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
+                    </div>
+                    <div className="flex flex-col">
+                      <h3 className={`font-bold text-[16px] ${item.color.split(' ')[2]}`}>{item.title}</h3>
+                    </div>
                   </div>
-
-                  <Link to="/health-check" className="w-full flex items-center justify-start gap-1.5 text-white font-bold text-[13px] cursor-pointer py-1 bg-transparent hover:opacity-80 transition-opacity group">
-                    View Package
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
-
       </section>
 
-      {/* Membership Section */}
-      <section className="bg-white pt-8 pb-12 relative overflow-hidden">
+      {/* Care Plan (Membership) Billboard Section */}
+      <section className="bg-white pt-4 pb-24 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 z-10">
-          <div className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <h2 className="text-[32px] md:text-[40px] font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B] w-fit">
-              Membership
-            </h2>
-            <Link to="/membership" className="flex items-center gap-2 transition-all font-bold text-[14px] group cursor-pointer border border-brand-600/20 px-5 py-2 rounded-[5px] hover:bg-brand-600/5">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B]">
-                See All Membership
-              </span>
-              <ArrowRight className="w-4 h-4 text-[#008E6B] group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Individual Plan", sub: "For 1 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
-              { title: "Couple Plan", sub: "For 3 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
-              { title: "Family Plan", sub: "For 5 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
-              { title: "Group Plan", sub: "For 10 Person", icon: ShieldCheck, features: ["Video Consultation", "Specialist Booking", "10% Medicine Discount"] },
-            ].map((tier, index) => (
-              <div 
-                key={index} 
-                className="bg-primary p-8 rounded-[5px] border border-white flex flex-col items-start gap-6 relative overflow-hidden"
-              >
-                <div className="relative z-10 w-12 h-12 rounded-xl bg-white border border-white flex items-center justify-center text-primary shrink-0">
-                  <tier.icon className="w-6 h-6" />
+          {/* Billboard Card - Light Theme */}
+          <div className="bg-[#f8fafc] border border-slate-100 rounded-[24px] p-8 md:p-12 relative overflow-hidden group shadow-sm">
+            {/* Background decorative element */}
+            <div className="absolute -right-20 -top-20 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl group-hover:bg-teal-500/10 transition-all duration-700"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-brand-600/5 rounded-full blur-3xl"></div>
+
+            <div className="flex flex-col lg:flex-row items-center gap-12 relative z-10">
+              {/* Left Side: Content */}
+              <div className="w-full lg:w-5/12 flex flex-col gap-6 text-center lg:text-left">
+                <div>
+                  <h2 className="text-[#1e3d36] text-[32px] md:text-[42px] font-black leading-tight mb-4">
+                    <span className="text-teal-600">Care</span> <br />
+                    Plan
+                  </h2>
+                  <p className="text-slate-500 text-[15px] md:text-[16px]">
+                    Choose the perfect membership plan for you and your family to enjoy exclusive benefits and discounts.
+                  </p>
                 </div>
                 
-                <div className="relative z-10 flex flex-col gap-1">
-                  <h3 className="font-bold text-[18px] text-white leading-tight">
-                    {tier.title}
-                  </h3>
-                  <p className="text-white text-[13px] font-bold uppercase tracking-wider">{tier.sub}</p>
-                </div>
-
-                <ul className="relative z-10 flex flex-col gap-2 w-full">
-                  {tier.features.map((feature, fIdx) => (
-                    <li key={fIdx} className="text-[13px] text-white flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="relative z-10 mt-auto w-full pt-4">
-                  <Link to="/membership" className="w-full flex items-center justify-start gap-1.5 text-white font-bold text-[13px] cursor-pointer py-1 bg-transparent hover:opacity-80 transition-opacity group">
+                <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
+                  <Link to="/membership" className="w-full sm:w-fit px-8 py-2.5 bg-teal-600 text-white rounded-[6px] font-bold text-[15px] hover:bg-[#1e3d36] transition-all shadow-lg hover:shadow-teal-500/20 text-center">
                     Get Membership
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
-            ))}
+
+              {/* Right Side: 6 Subjects Grid */}
+              <div className="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                {[
+                  { title: "Individual Plan", sub: "For 1 Person", icon: <Users className="w-5 h-5" />, color: "bg-blue-50 border-blue-100 text-blue-900" },
+                  { title: "Couple Plan", sub: "For 3 Person", icon: <Users className="w-5 h-5" />, color: "bg-teal-50 border-teal-100 text-teal-900" },
+                  { title: "Family Plan", sub: "For 5 Person", icon: <Heart className="w-5 h-5" />, color: "bg-rose-50 border-rose-100 text-rose-900" },
+                  { title: "Joint Family Plan", sub: "For 10 Person", icon: <Users className="w-5 h-5" />, color: "bg-orange-50 border-orange-100 text-orange-900" },
+                  { title: "Personalized Care Plan", sub: "For 1 Person", icon: <ShieldCheck className="w-5 h-5" />, color: "bg-purple-50 border-purple-100 text-purple-900" },
+                  { title: "Group Plan", sub: "Min 5 Persons", icon: <ShieldCheck className="w-5 h-5" />, color: "bg-emerald-50 border-emerald-100 text-emerald-900" },
+                ].map((item, index) => (
+                  <div key={index} className={`${item.color.split(' ')[0]} border ${item.color.split(' ')[1]} p-3.5 md:p-4 rounded-[12px] flex items-center gap-3 hover:shadow-md transition-all cursor-pointer group/item shadow-sm`}>
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 bg-white p-2 shadow-sm">
+                      <div className={item.color.split(' ')[2].replace('text-', 'text-')}>
+                        {React.cloneElement(item.icon, { className: `w-5 h-5 ${item.color.split(' ')[2]}` })}
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <h3 className={`font-bold text-[14.5px] leading-tight ${item.color.split(' ')[2]}`}>{item.title}</h3>
+                      <p className={`${item.color.split(' ')[2]} opacity-70 text-[12px] font-medium`}>{item.sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+
 
       {/* About Platform Section */}
       <section className="login-bg py-12 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-4 z-10">
           <div className="glass-card p-10 md:p-16 rounded-[20px] border border-white/60">
             <h2 className="text-[28px] md:text-[36px] font-black text-brand-900 mb-2 leading-tight">
-              Stay Healthy with <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0089BA] to-[#008E6B]">“Easy Healthcare”</span> online Care platform
+              Stay Healthy with <span className="text-[#1e3d36]">“Easy Healthcare”</span> online Care platform
             </h2>
-            <p className="text-brand-600 font-bold text-[18px] mb-8 italic">We bring care to health</p>
-            
+            <p className="text-[#1e3d36] font-bold text-[18px] mb-8 italic">We bring care to health</p>
+
             <div className="text-slate-600 text-[16px] leading-relaxed text-justify">
               <p>
                 Easy Healthcare is the largest online healthcare platform in Bangladesh. We have built a real-time integrated approach healthcare platform for all your healthcare solutions. Easy Healthcare, our goal is to make healthcare accessible, understandable and affordable in Bangladesh. Patient / Customer centricity is the core of our values. Our team of highly trained and experienced doctors, health professional, phlebotomists and pharmacists looks into each order to give you a fulfilling experience. Visit our online healthcare platform now, and avail online healthcare service and Product buy at an affordable or at a best discount price Stay Healthy!

@@ -109,7 +109,7 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-50 w-full">
       {/* Top Header */}
-      <div className="bg-gradient-to-r from-[#F0F9FF] via-[#F0F9FF] via-[62%] to-white border-b border-slate-100/50">
+      <div className="bg-white border-b border-slate-100/50">
         <div className="max-w-[1200px] mx-auto px-4 h-9 flex items-center justify-between text-[11px] sm:text-[12px] font-medium text-slate-500">
           <div className="flex items-center gap-1 sm:gap-2 truncate mr-2">
             <span className="hidden sm:inline material-symbols-outlined text-[18px] text-brand-600">campaign</span>
@@ -134,7 +134,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="bg-gradient-to-r from-[#F0F9FF] via-[#F0F9FF] via-[62%] to-white h-16 flex items-center w-full shadow-none">
+      <header className="bg-white h-16 flex items-center w-full shadow-none border-b border-slate-100/50">
         <div className="w-full max-w-[1200px] mx-auto px-4 flex items-center justify-between relative">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 shrink-0 z-10">

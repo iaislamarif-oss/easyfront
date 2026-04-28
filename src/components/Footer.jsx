@@ -36,15 +36,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-[#F0F9FF] via-[#F0F9FF] via-[62%] to-white border-t border-slate-200/60 pt-10 pb-6">
+    <footer className="bg-[#1e3d36] border-t border-white/10 pt-10 pb-6">
       <div className="max-w-[1200px] mx-auto px-4">
 
         {/* Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-10 pb-10 border-b border-slate-200/60 max-w-[800px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-10 pb-10 border-b border-white/10 max-w-[800px]">
           {footerLinks.map((column, index) => (
             <div key={index}>
-              <h4 className="text-[13px] font-bold uppercase tracking-[0.1em] text-brand-900 mb-4 flex items-center gap-2">
-                <span className="w-1 h-3 bg-brand-600 rounded-full"></span>
+              <h4 className="text-[13px] font-bold uppercase tracking-[0.1em] text-white mb-4 flex items-center gap-2">
+                <span className="w-1 h-3 bg-white/50 rounded-full"></span>
                 {column.title}
               </h4>
               <div className="flex flex-col gap-3">
@@ -52,7 +52,7 @@ const Footer = () => {
                   <Link 
                     key={lIndex} 
                     to={link.path} 
-                    className="flex items-center gap-2 text-[13.5px] text-slate-500 hover:text-brand-600 transition-colors group"
+                    className="flex items-center gap-2 text-[13.5px] text-slate-300 hover:text-white transition-colors group"
                   >
                     {link.name}
                   </Link>
@@ -65,11 +65,11 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-[12px] text-slate-400">
-            © 2022-2026 <span className="font-bold text-slate-600">Easy Healthcare Diagnostic & Consultation Center Online Platform</span>
+            © 2022-2026 <span className="font-bold text-white/90">Easy Healthcare Diagnostic & Consultation Center Online Platform</span>
           </p>
           <div className="flex items-center gap-1.5 text-[12px] text-slate-400">
             Technical Support By, 
-            <a href="https://www.linkedin.com/in/himayet-ali-joy" target="_blank" rel="noopener noreferrer" className="font-bold text-brand-600 hover:underline transition-colors">
+            <a href="https://www.linkedin.com/in/himayet-ali-joy" target="_blank" rel="noopener noreferrer" className="font-bold text-white/80 hover:text-white hover:underline transition-colors">
               MD Himayet Ali Joy
             </a>
           </div>
