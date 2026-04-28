@@ -103,7 +103,6 @@ const Header = () => {
         { name: 'Become a Tele-health Agent', path: '/tele-health-agent' },
       ]
     },
-    { name: 'Get Ambulance', path: '/get-ambulance' },
   ];
 
   return (
@@ -203,6 +202,11 @@ const Header = () => {
 
       {/* Action Buttons */}
         <div className="flex items-center gap-2.5 z-10">
+          <Link to="/get-ambulance" className="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-red-50 text-red-600 rounded-[4px] text-[12px] font-bold hover:bg-red-100 transition-all border border-red-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-ambulance"><path d="M10 10H6"/><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14"/><path d="M8 8v4"/><path d="M9 18h6"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+            Get Ambulance
+          </Link>
+          
           {/* Hamburger Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -303,6 +307,10 @@ const Header = () => {
               ))}
               {/* Extra Top Bar Links for Mobile */}
               <div className="mt-2">
+                <Link to="/get-ambulance" className="sm:hidden flex items-center justify-center gap-2 mx-6 my-2 px-4 py-2.5 bg-red-50 text-red-600 rounded-[6px] text-[13.5px] font-bold hover:bg-red-100 transition-all border border-red-100" onClick={() => setIsMobileMenuOpen(false)}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-ambulance"><path d="M10 10H6"/><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502l-1.539-3.076A1 1 0 0 0 16.382 8H14"/><path d="M8 8v4"/><path d="M9 18h6"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                  Get Ambulance
+                </Link>
                 <Link to="/membership" className="block px-6 py-3 text-[13.5px] font-semibold text-slate-700 hover:text-brand-600" onClick={() => setIsMobileMenuOpen(false)}>
                   Get Membership
                 </Link>

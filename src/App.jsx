@@ -5,6 +5,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import HomeCare from './pages/HomeCare';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ComplaintBox from './pages/ComplaintBox';
+import AmbulanceProvider from './pages/AmbulanceProvider';
 import RequestAppointment from './pages/RequestAppointment';
 import FindDoctor from './pages/FindDoctor';
 import SecondOpinion from './pages/SecondOpinion';
@@ -27,6 +30,9 @@ const Layout = ({ children }) => {
   const location = useLocation();
   const hideLayout = [
     '/login', 
+    '/signup',
+    '/complaint-box',
+    '/partner/ambulance',
     '/request-appointment', 
     '/lab-report', 
     '/tele-health-agent',
@@ -85,6 +91,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home-care" element={<HomeCare />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/complaint-box" element={<ComplaintBox />} />
+          <Route path="/partner/ambulance" element={<AmbulanceProvider />} />
           <Route path="/request-appointment" element={<RequestAppointment />} />
           <Route path="/find-doctor" element={<FindDoctor />} />
           <Route path="/second-opinion" element={<SecondOpinion />} />
