@@ -87,7 +87,7 @@ const Header = () => {
       hasDropdown: true,
       subLinks: [
         { name: 'Home Country', path: '#' },
-        { name: 'Health Destination', path: '#' },
+        { name: 'Health Destination', path: '/health-destination' },
         { name: 'Abroad Healthcare', path: '#' },
         { name: 'Booking Process', path: '#' },
       ]

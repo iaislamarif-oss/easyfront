@@ -14,6 +14,7 @@ import OrderPolicy from './pages/OrderPolicy';
 import RefundPolicy from './pages/RefundPolicy';
 import IpUsePolicy from './pages/IpUsePolicy';
 import ForgotPassword from './pages/ForgotPassword';
+import HealthDestination from './pages/HealthDestination';
 import RequestAppointment from './pages/RequestAppointment';
 import FindDoctor from './pages/FindDoctor';
 import SecondOpinion from './pages/SecondOpinion';
@@ -45,6 +46,7 @@ const Layout = ({ children }) => {
     '/refund-policy',
     '/ip-use-policy',
     '/forgot-password',
+    '/health-destination',
     '/request-appointment', 
     '/lab-report', 
     '/tele-health-agent',
@@ -112,6 +114,7 @@ function App() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/ip-use-policy" element={<IpUsePolicy />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/health-destination" element={<HealthDestination />} />
           <Route path="/request-appointment" element={<RequestAppointment />} />
           <Route path="/find-doctor" element={<FindDoctor />} />
           <Route path="/second-opinion" element={<SecondOpinion />} />
